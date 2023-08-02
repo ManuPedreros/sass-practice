@@ -1,0 +1,47 @@
+/* Mixins */
+@use 'mixinsfunc';
+
+// Definen estilos que pueden re utilizarse
+// Se invocan usando @include, si estan dentro de un partial debemos poner el name space de ese partial antes y .
+
+// Vamos a crear un mixin para usar localmente
+// Truco: cuando hacemos un mixin de una propiedad que contiene otras subpropiedades
+// Podemos llamarlas como si fueran un objeto
+@mixin arreglar-imagen {
+    background: {
+        size: cover;
+        position: 0 0;
+        repeat: no-repeat;
+    }
+    // background-size: contain;
+    // background-position: 0 0;
+    // background-repeat: no-repeat;
+}
+
+.hero {
+
+    &__container {
+        height: calc(100vh - 70px);
+        background-image: linear-gradient(#000000b5, #000000b9), url('../img/element5-digital-OyCl7Y4y0Bk-unsplash.jpg');
+
+        // @include mixinsfunc.crear-flexbox;
+        @include mixinsfunc.crear-flexbox-arg(center);
+        @include arreglar-imagen;
+    }
+
+    &__texts {
+        width: 90%;
+        color: #863d5b;
+    }
+
+    &__title {
+        // font-size: 3rem;
+        // usaremos una función para aplicar el font size de 30 pixeles
+        font-size: mixinsfunc.pixeles-rem(40);
+        margin: mixinsfunc.pixeles-rem(10);
+    }
+
+    &__paragraph {
+        font-size: mixinsfunc.pixeles-rem(18);
+    }
+}

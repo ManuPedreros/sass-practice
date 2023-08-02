@@ -1,15 +1,16 @@
 /* ===== Varibles ===== */
 
-// Permiten definir un estilo que vamos a usar varias veces
-// así si debemos hacer un cambio, solo lo hacemos una ves
+/* Permiten definir un estilo que vamos a usar varias veces
+así si debemos hacer un cambio, solo lo hacemos una ves*/
 
 
 /* ===== Modulos ó Partials ===== */
 
-// Sass permite modularizar nuestro código, dividirlo en partes para hacerlo más legible y corto,
-// se hace utilizando los partials que son archivos que no son compilados directamente sino desde nuestro archivo principal,
-// los partials se nombran con la regla _namePartial.scss y luego para llamarlos en el archivo ppal,
-// se usa la regla up-rule @use 'namePartial'; y en ese momento serán compilados en nuestro css
+/* Sass permite modularizar nuestro código, dividirlo en partes para hacerlo más legible y corto,
+/* se hace utilizando los partials que son archivos que no son compilados directamente sino desde nuestro archivo principal,
+/* los partials se nombran con la regla _namePartial.scss y luego para llamarlos en el archivo ppal,
+se usa la regla up-rule @use 'namePartial'; y en ese momento serán compilados en nuestro css*/
 @use 'reset';
 @use 'navbar';
-// @use 'animaciones';
+/*@use 'animaciones'; */
+@use 'hero';

@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+// Creamos un mixins para el estilo de flexbox que se repite mucho
+
+@mixin crear-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// También podemos pasar argumentos al mixin
+@mixin crear-flexbox-arg($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+/* ===== Funciones ===== */
+
+// Las funciones son como los mixins pero para re utilizar código
+// principalmente operaciones, para lo que llamamos un partial o módulo 
+// que viene integrado con sass sass:math
+
+@function pixeles-rem($pixeles) {
+    //32/16 = 2*1rem = 2rem
+    $rem: math.div($pixeles, 16) * 1rem;
+
+    @return $rem;
+}
