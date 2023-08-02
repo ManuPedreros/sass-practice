@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/main.scss","../sass/_reset.scss","../sass/_navbar.scss","../sass/_variables.scss"],"names":[],"mappings":";AAAA;AAMA;ACNA;EACI;EACA;;;AAEJ;EACI;;;ACHJ;AAEA;EACI,kBCLI;;ADOJ;EACI;;AACA;EACI;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;;AAEJ;EACI;EACA;;AACA;EACI;;AAEJ;EACI;;AAGR;EACI;IACI","file":"main.css"}

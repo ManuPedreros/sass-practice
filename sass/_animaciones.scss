@@ -1,0 +1,28 @@
+// Los ciclos nos permiten repetir código cierta cantidad de veces, con esto escribimos mucho más código de manera más corta
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    animation-duration: 1s;// para que dure 1 seg
+    animation-iteration-count: infinite;// para que nunca pare la animación
+    animation-direction: alternate; // para que sea alternada, que cuando llegue al 100% pase al 1% pero con animación
+}
+
+// Ahora creamos un ciclo con la regla At-rule y usamos una variable iteradora de 1 a 5
+@for $iterador from 1 through 5 {
+    .circle-#{$iterador}{
+        animation-name: animacion#{$iterador};
+        // integramos un keyframes
+        @keyframes animacion#{$iterador} {
+            100%{
+                transform: translate(50% * $iterador);
+            }
+        }
+
+        // En sass también podemos usar condicionales
+        @if $iterador == 5 {
+            animation-direction: alternate-reverse;
+        }
+    }
+}

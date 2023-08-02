@@ -1,0 +1,38 @@
+@use 'variables';
+
+/* ===== Nesting o anidamiento ===== */
+
+#{variables.$selector} {
+    background-color: variables.$color;
+    // Permite crear selectores descendientes sin referenciar al padre
+    ul {
+        color: #000;
+        li {
+            color: #fff;
+        }
+    }
+    // Una buena práctica es usar la metodología BEM, usando el selector de sass llamado parent element representado con '&'
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__item {
+        color: #fff;
+        text-decoration: none;
+        &--active {
+            text-decoration: underline;
+        }
+        &:hover {
+            color: #000;
+        }
+    }
+    @media (min-width:764px) {
+        &__container {
+            justify-content: flex-end;
+        }
+    }
+}

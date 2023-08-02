@@ -1,0 +1,6 @@
+$color: steelblue;
+
+// Se pueden usar variables como selectore o propiedades, pero cuando las invoquemos debemos interpolar
+$selector: '.nav';
+// Para usarlo, interpolamos la variable #{$selector}
+
